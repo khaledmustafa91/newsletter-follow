@@ -3,8 +3,8 @@ import iconSuccess from '../../public/images/icon-success.svg';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-sm">
-      <div className="p-14 items-center bg-white rounded-[35px] max-w-[400px]">
+    <main className="lg:flex min-h-screen flex-col items-center lg:justify-between lg:p-24 text-sm h-full">
+      <div className="max-sm:h-dvh p-14 items-center bg-white lg:rounded-[35px] lg:max-w-[400px]">
         <div>
           <Image src={iconSuccess} width={50} height={50} alt="icon_success" />
         </div>
