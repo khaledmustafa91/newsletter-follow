@@ -31,3 +31,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.icon-list {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0;  /* Optional: remove padding */
+}
+
+.icon-list li {
+  position: relative;
+  padding-left: 35px; /* Adjust this value to space the icon and text */
+  margin-top: 10px;
+}
+
+.icon-list li::before {
+  content: url('../public/images/icon-list.svg'); /* Path to your icon image */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px; /* Adjust as needed */
+  height: 16px; /* Adjust as needed */
+}

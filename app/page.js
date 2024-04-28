@@ -1,52 +1,47 @@
 import Image from 'next/image';
 import iconList from '../public/images/icon-list.svg';
 import illustrationSignUpDesktop from '../public/images/illustration-sign-up-desktop.svg';
+import illustrationSignUpMobile from '../public/images/illustration-sign-up-mobile.svg';
 
 export default function Home() {
   return (
-    // margin-top: 122px;
-    // margin-left: 87px;
-    // min-width: 927px;
-    // border-radius: 5%;
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-sm">
-      <div className="items-center grid grid-cols-2 min-w-[927px] bg-white rounded-[35px] mt-[156px] ml-[87px]">
-        {/* margin-left: 80px;
-    line-height: 45px; */}
-        <div>
-          {/* font-size: 56px;
-          margin-top: -129px;
-          margin-left: 1px; */}
-          <h1 className="text-5xl font-bold">Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on</p>
-          <ul className="list-image-[url(../public/images/icon-list.svg)]">
-            <li>Product discovery and building what matters </li>
-            <li> Measuring to ensure updates are a success </li>
-            <li> And much more! </li>
-          </ul>
-
+    <main className="lg:flex min-h-screen lg:flex-col max-md:flex-col-reverse items-center lg:justify-between lg:p-24 text-sm lg:h-full">
+      <div className="flex max-md:flex-col-reverse max-md:h-dvh lg:p-4 items-center bg-white lg:rounded-3xl">
+        <div className="lg:p-9 max-md:p-4 max-w-[400px]">
           <div>
-            <label
-              htmlFor="small-input"
-              className="block mb-2 text-sm font-medium"
-            >
-              Email address
+            <h1 className="text-5xl text-[#36384e] font-bold">Stay updated!</h1>
+          </div>
+          <div className="mt-5">
+            <p>Join 60,000+ product managers receiving monthly updates on</p>
+          </div>
+          <div className="mt-5">
+            <ul className="icon-list">
+              <li> Product discovery and building what matters</li>
+              <li> Measuring to ensure updates are a success </li>
+              <li> And much more! </li>
+            </ul>
+          </div>
+
+          <div className="mt-5">
+            <label htmlFor="small-input" className="block mb-2 text-xs">
+              <b>Email address</b>
             </label>
             <input
               type="email"
               id="email-address"
-              className="border text-sm rounded-lg block w-2/3 p-2.5"
+              className="border text-sm rounded-lg block w-full p-2.5"
               placeholder="email@company.com"
             />
-            <button className="bg-[#36384e] hover:bg-[#ff6257] text-white font-bold py-2 px-4 border rounded">
+            <button className="mt-5 bg-[#36384e] hover:bg-[#ff6257] text-white font-bold py-3 px-12 border rounded-lg w-full">
               Subscribe to monthly newsletter
             </button>
           </div>
         </div>
-        <div>
+        <div className="flex items-end">
           <Image
             src={illustrationSignUpDesktop}
-            className="p-[20px] mt-[5px] ml-[21px] w-auto"
             alt="illustrationSignUp"
+            style={{ objectFit: 'none' }}
           />
         </div>
       </div>
